@@ -1,0 +1,19 @@
+[{
+      "title": "The Tale of Hamlen Juza",
+      "pages": 1000,
+      "author":"Hamlin Juza",
+      "isbn": 12039,
+      "genre": "Horror",
+      "synopsis": "A horrifying tale of Hamlen Juza's adult life",
+      "format": "virtual reality"
+    },
+    {
+      "title": "The Story of A Man Named Tom",
+      "pages": 100,
+      "author":"Tom",
+      "isbn": 120123,
+      "genre": "Horror",
+      "synopsis": "A horrifying tale of Hamlen Juza's adult life",
+      "format": "audiobook"
+    }
+]

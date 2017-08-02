@@ -1,0 +1,20 @@
+{
+  "name": "collectionmanager",
+  "version": "1.0.0",
+  "description": "collection manager",
+  "main": ".js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "James Spargo",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "express-validator": "^3.2.1",
+    "mongodb": "^2.2.30",
+    "mongoose": "^4.10.8",
+    "mustache-express": "^1.2.5"
+  }
+}
