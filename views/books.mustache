@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel=stylesheet href="./styles.css">
     <meta charset="utf-8">
     <title></title>
   </head>
   <body>
-    {{books}}
+    {{#books}}
+    <h1>Title: {{title}}</h1>
+    <p>Pages: {{pages}}</p>
+    <p>Author:{{author}}</p>
+    <p>ISBN: {{isbn}}</p>
+    <p>Genre: {{genre}}</p>
+    <p>Synopsis: {{synopsis}}</p>
+    <p>Format: {{format}}</p>
+    {{/books}}
   </body>
 </html>

@@ -13,27 +13,30 @@ app.set('view engine', 'mustache');
 app.set('views', __dirname + '/views');
 
 app.get('/', function (req, res) {
-      res.render('books',{books})
+      Book.find().then(function(books){
+        res.render('books',{books})
+    });
 });
 
 const bookSchema = new mongoose.Schema({
-  title: { type: String, require: true, unique: true},
+  title: String,
   pages: Number,
-  author: {firstName: String, lastName:String},
+  author: String,
   isbn:{ type:Number, unique: true},
   genre: {type: String, lowercase: true },
   synopsis: String,
   format: { type: String, lowercase: true, default: 'book'}
 });
 
-const Book = mongoose.model('Books', bookSchema);
+
+const Book = mongoose.model('Book', bookSchema);
 var book = new Book();
-book.author = {"firstName": "Hamlen", "lastName": "Juza"};
-book.title = "Hamlen Juza's  Other Twin";
-book.pages = 2019;
-book.isbn = 201920;
+book.author = "Hamlen Juza's Twin";
+book.title = "Hamlen Juza's  Other Twin's Brothers Twin";
+book.pages = 20;
+book.isbn = 12;
 book.genre = "horror"
-book.synopsis = "A book about a robot with a horrifying life during Vietnam where he discovered he was actually his own brother."
+book.synopsis = "A book about a robot with a horrifying life during Vietnam where he discovered he was actually his own brother's twin."
 book.format = "virtual reality"
 
 
