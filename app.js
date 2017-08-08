@@ -15,7 +15,7 @@ app.set('views', __dirname + '/views');
 app.get('/', function (req, res) {
       Book.find().then(function(books){
         res.render('books',{books})
-    });
+      });
 });
 
 const bookSchema = new mongoose.Schema({
@@ -28,7 +28,6 @@ const bookSchema = new mongoose.Schema({
   format: { type: String, lowercase: true, default: 'book'}
 });
 
-
 const Book = mongoose.model('Book', bookSchema);
 var book = new Book();
 book.author = "Hamlen Juza's Twin";
@@ -39,16 +38,13 @@ book.genre = "horror";
 book.synopsis = "A book about a robot with a horrifying life during Vietnam where he discovered he was actually his own brother's twin.";
 book.format = "virtual reality"
 
-
-
-
 book.save().then(function() {
   //actions after successful save
   console.log('book saved');
-}).catch(function () {
-  console.log('Mongo couldn\'t save the book');
+  }).catch(function () {
+    console.log('Mongo couldn\'t save the book');
   //handle Error
-});
+  });
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!')
 });
