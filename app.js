@@ -35,8 +35,8 @@ book.author = "Hamlen Juza's Twin";
 book.title = "Hamlen Juza's  Other Twin's Brothers Twin";
 book.pages = 20;
 book.isbn = 12;
-book.genre = "horror"
-book.synopsis = "A book about a robot with a horrifying life during Vietnam where he discovered he was actually his own brother's twin."
+book.genre = "horror";
+book.synopsis = "A book about a robot with a horrifying life during Vietnam where he discovered he was actually his own brother's twin.";
 book.format = "virtual reality"
 
 
@@ -47,7 +47,7 @@ book.save().then(function() {
   console.log('book saved');
 }).catch(function () {
   console.log('Mongo couldn\'t save the book');
-  //hanlde Error
+  //handle Error
 });
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!')
